@@ -5,17 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./PrimeLar.css">
   <link rel="icon" type="image/png" href="./Logo-PrimeLar.ico">
+  
+  <!-- Fontes e Ícones -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=BJCree:wght@400;500;600;700&family=Oswald:wght@200..700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=BJCree:wght@400;500;600;700&family=M+PLUS+U:wght@100..900&family=Oswald:wght@200..700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Saira:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  
   <title>Financiamento — Prime Lar</title>
 </head>
-<body style="background-color:#25252b;">
+<body style="background-color:#121216;">
 
+<!-- BARRA DE NAVEGAÇÃO -->
+<nav class="navigation">
   <a href="./index.html">
-    <nav class="navigation">
-  <img class="logo" src="Logo - PrimeLar.png" alt="Prime Lar">
+    <img class="logo" src="Logo - PrimeLar.png" alt="Prime Lar">
+  </a>
 
   <button class="menu-toggle" aria-label="Abrir menu">
     <i class="fa-solid fa-bars"></i>
@@ -23,177 +27,186 @@
 
   <div class="nav-menu">
     <div class="nav-links-container">
-      <button class="botao"><a href="./index.html#aluguel">Alugar</a></button>
-      <button class="botao"><a href="./index.html#comprar">Comprar</a></button>
-      <button class="botao"><a href="./anunciar.html">Anunciar</a></button>
-      <button class="botao"><a href="./financiamento.html">Financiamento</a></button>
-      <button class="botao"><a href="./index.html#ajuda">Ajuda</a></button>
+      <a class="botao" href="./index.html#aluguel">Alugar</a>
+      <a class="botao" href="./index.html#comprar">Comprar</a>
+      <a class="botao" href="./anunciar.html">Anunciar</a>
+      <a class="botao" href="./financiamento.html">Financiamento</a>
+      <a class="botao" href="./index.html#ajuda">Ajuda</a>
     </div>
 
     <div class="nav-links-container">
-      <button class="botao"><a href="./index.html#login">Login</a></button>
-      <button class="botao botao-destaque"><a href="./index.html#registro">Registre-se</a></button>
+      <a class="botao" href="./login.html">Login</a>
+      <a class="botao botao-destaque" href="./registro.html">Registre-se</a>
     </div>
   </div>
 </nav>
 
-  <br><br>
+<!-- SEÇÃO PRINCIPAL DE FINANCIAMENTO -->
+<div class="padrao">
+  <h1 class="h1-aluguel">Financiamento Imobiliário</h1>
+  <p class="p-aluguel" style="margin-bottom: 30px; text-align: center;">
+    Realizar o sonho da casa própria ficou mais acessível. Conectamos você às melhores opções de crédito imobiliário, com simulação gratuita e acompanhamento completo em todas as etapas.
+  </p>
 
-  <div class="padrao">
-    <center>
-      <h1 class="h1-aluguel">FINANCIAMENTO</h1>
-    </center>
-    <p class="p-aluguel">
-      Realizar o sonho da casa própria ficou mais acessível. A Prime Lar conecta você às melhores
-      opções de financiamento imobiliário, com simulação gratuita e acompanhamento em todas as etapas
-      — da análise de crédito até a assinatura do contrato. <br><br>
-
-      <strong>1. Simule seu financiamento:</strong> Informe o valor do imóvel, valor de entrada e prazo
-      desejado. Nossa ferramenta calcula as parcelas estimadas com base nas taxas dos principais bancos
-      parceiros, incluindo opções do Minha Casa Minha Vida. <br><br>
-
-      <strong>2. Análise de crédito:</strong> Envie seus documentos (RG, CPF, comprovante de renda e
-      residência) para uma pré-análise rápida. O retorno costuma sair em até 48 horas úteis, sem
-      comprometer seu score de crédito. <br><br>
-
-      <strong>3. Escolha a melhor proposta:</strong> Compare taxas de juros, prazos e condições entre
-      diferentes instituições financeiras. Nossos consultores ajudam a escolher a modalidade ideal:
-      SFH (Sistema Financeiro de Habitação), SFI ou consórcio imobiliário. <br><br>
-
-      <strong>4. Assinatura e entrega das chaves:</strong> Com o crédito aprovado, acompanhamos a
-      vistoria do imóvel, a emissão do contrato e o registro em cartório. Você recebe as chaves com
-      total segurança jurídica. <br><br>
-
-      <strong>Programas especiais:</strong> Trabalhamos com Minha Casa Minha Vida, FGTS como entrada,
-      uso de saldo do FGTS para abatimento de parcelas e financiamento para imóveis na planta ou usados. <br><br>
-
-      Quer saber quanto você pode financiar? Entre em contato com nossa equipe ou acesse a área
-      de <strong>Login</strong> para fazer sua simulação personalizada.
-    </p>
+  <div class="steps-grid">
+    <div class="step-card">
+      <i class="fa-solid fa-calculator"></i>
+      <h3>1. Simule</h3>
+      <p>Informe o valor e prazo desejado para calcular parcelas com taxas dos principais bancos.</p>
+    </div>
+    <div class="step-card">
+      <i class="fa-solid fa-file-invoice-dollar"></i>
+      <h3>2. Crédito</h3>
+      <p>Envie sua documentação básica para uma pré-análise rápida sem comprometer seu score.</p>
+    </div>
+    <div class="step-card">
+      <i class="fa-solid fa-handshake"></i>
+      <h3>3. Proposta</h3>
+      <p>Compare taxas e escolha entre SFH, SFI ou consórcio imobiliário com auxílio de consultores.</p>
+    </div>
+    <div class="step-card">
+      <i class="fa-solid fa-key"></i>
+      <h3>4. Chaves</h3>
+      <p>Acompanhamento de vistoria, contrato e cartório para você receber as chaves com segurança.</p>
+    </div>
   </div>
+</div>
 
-  <br><br>
+<!-- TÍTULO DA SEÇÃO DE IMÓVEIS -->
+<h2 class="categorias">Imóveis Disponíveis para Financiamento</h2>
 
-  <h2 class="categorias">Imóveis disponíveis para financiamento</h2>
+<!-- GRID DE ANÚNCIOS -->
+<section class="anuncios-grid">
 
-  <section class="anuncios-grid">
+  <article class="anuncio-card">
+    <div class="anuncio-img anuncio-img-1">
+      <span class="anuncio-badge">Minha Casa Minha Vida</span>
+    </div>
+    <div class="anuncio-corpo">
+      <h3>Apartamento 2 quartos — Jardim América</h3>
+      <p class="anuncio-local"><i class="fa-solid fa-location-dot"></i> Ribeirão Preto, SP</p>
+      <ul class="anuncio-detalhes">
+        <li><i class="fa-solid fa-bed"></i> 2 qtos</li>
+        <li><i class="fa-solid fa-ruler-combined"></i> 58 m²</li>
+        <li><i class="fa-solid fa-car"></i> 1 vaga</li>
+      </ul>
+      <p class="anuncio-preco">R$ 285.000</p>
+      <p class="anuncio-parcela" style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 15px;">Parcela estimada: <strong style="color: #c5a880;">R$ 1.890/mês</strong></p>
+      <a href="#" class="botao botao-destaque" style="display: block; text-align: center;">Simular Financiamento</a>
+    </div>
+  </article>
 
-    <article class="anuncio-card">
-      <div class="anuncio-img anuncio-img-1">
-        <span class="anuncio-badge">Minha Casa Minha Vida</span>
+  <article class="anuncio-card">
+    <div class="anuncio-img anuncio-img-2">
+      <span class="anuncio-badge">Aceita FGTS</span>
+    </div>
+    <div class="anuncio-corpo">
+      <h3>Casa térrea com quintal — Vila Tibério</h3>
+      <p class="anuncio-local"><i class="fa-solid fa-location-dot"></i> Ribeirão Preto, SP</p>
+      <ul class="anuncio-detalhes">
+        <li><i class="fa-solid fa-bed"></i> 3 qtos</li>
+        <li><i class="fa-solid fa-ruler-combined"></i> 120 m²</li>
+        <li><i class="fa-solid fa-car"></i> 2 vagas</li>
+      </ul>
+      <p class="anuncio-preco">R$ 420.000</p>
+      <p class="anuncio-parcela" style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 15px;">Parcela estimada: <strong style="color: #c5a880;">R$ 2.650/mês</strong></p>
+      <a href="#" class="botao botao-destaque" style="display: block; text-align: center;">Simular Financiamento</a>
+    </div>
+  </article>
+
+  <article class="anuncio-card">
+    <div class="anuncio-img anuncio-img-3">
+      <span class="anuncio-badge">Lançamento</span>
+    </div>
+    <div class="anuncio-corpo">
+      <h3>Apartamento com varanda gourmet</h3>
+      <p class="anuncio-local"><i class="fa-solid fa-location-dot"></i> Campos Elíseos, Ribeirão Preto</p>
+      <ul class="anuncio-detalhes">
+        <li><i class="fa-solid fa-bed"></i> 2 qtos</li>
+        <li><i class="fa-solid fa-ruler-combined"></i> 72 m²</li>
+        <li><i class="fa-solid fa-car"></i> 1 vaga</li>
+      </ul>
+      <p class="anuncio-preco">R$ 398.000</p>
+      <p class="anuncio-parcela" style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 15px;">Parcela estimada: <strong style="color: #c5a880;">R$ 2.480/mês</strong></p>
+      <a href="#" class="botao botao-destaque" style="display: block; text-align: center;">Simular Financiamento</a>
+    </div>
+  </article>
+
+  <article class="anuncio-card">
+    <div class="anuncio-img anuncio-img-4">
+      <span class="anuncio-badge">Mobiliado</span>
+    </div>
+    <div class="anuncio-corpo">
+      <h3>Apartamento mobiliado — Centro</h3>
+      <p class="anuncio-local"><i class="fa-solid fa-location-dot"></i> Centro, Ribeirão Preto</p>
+      <ul class="anuncio-detalhes">
+        <li><i class="fa-solid fa-bed"></i> 1 qto</li>
+        <li><i class="fa-solid fa-ruler-combined"></i> 45 m²</li>
+        <li><i class="fa-solid fa-car"></i> 1 vaga</li>
+      </ul>
+      <p class="anuncio-preco">R$ 310.000</p>
+      <p class="anuncio-parcela" style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 15px;">Parcela estimada: <strong style="color: #c5a880;">R$ 2.050/mês</strong></p>
+      <a href="#" class="botao botao-destaque" style="display: block; text-align: center;">Simular Financiamento</a>
+    </div>
+  </article>
+
+</section>
+
+<!-- RODAPÉ INTEGRADO -->
+<footer class="real-estate-footer">
+  <div class="footer-container">
+    <div class="footer-grid">
+      <div class="footer-column footer-about">
+        <div class="footer-logo">
+          <i class="fa-solid fa-house-chimney-window"></i> Prime Lar
+        </div>
+        <p>A imobiliária inteligente que conecta você ao seu próximo destino. Excelência em locação digital e financiamento imobiliário.</p>
+        <span class="creci-badge">CRECI 12345-J</span>
       </div>
-      <div class="anuncio-corpo">
-        <h3>Apartamento 2 quartos — Jardim América</h3>
-        <p class="anuncio-local"><i class="fa-solid fa-location-dot"></i> Ribeirão Preto, SP</p>
-        <ul class="anuncio-detalhes">
-          <li><i class="fa-solid fa-bed"></i> 2 quartos</li>
-          <li><i class="fa-solid fa-ruler-combined"></i> 58 m²</li>
-          <li><i class="fa-solid fa-car"></i> 1 vaga</li>
+
+      <div class="footer-column footer-links">
+        <h3>Encontre Imóveis</h3>
+        <ul>
+          <li><a href="./index.html#aluguel"><i class="fa-solid fa-chevron-right"></i> Apartamentos</a></li>
+          <li><a href="./index.html#comprar"><i class="fa-solid fa-chevron-right"></i> Casas em Condomínio</a></li>
+          <li><a href="./index.html#comprar"><i class="fa-solid fa-chevron-right"></i> Coberturas</a></li>
         </ul>
-        <p class="anuncio-preco">R$ 285.000</p>
-        <p class="anuncio-parcela">Parcela estimada: <strong>R$ 1.890/mês</strong></p>
-        <button class="botao anuncio-btn"><a href="#">Simular financiamento</a></button>
       </div>
-    </article>
 
-    <article class="anuncio-card">
-      <div class="anuncio-img anuncio-img-2">
-        <span class="anuncio-badge anuncio-badge-fgts">Aceita FGTS</span>
-      </div>
-      <div class="anuncio-corpo">
-        <h3>Casa térrea com quintal — Vila Tibério</h3>
-        <p class="anuncio-local"><i class="fa-solid fa-location-dot"></i> Ribeirão Preto, SP</p>
-        <ul class="anuncio-detalhes">
-          <li><i class="fa-solid fa-bed"></i> 3 quartos</li>
-          <li><i class="fa-solid fa-ruler-combined"></i> 120 m²</li>
-          <li><i class="fa-solid fa-car"></i> 2 vagas</li>
+      <div class="footer-column footer-links">
+        <h3>A Imobiliária</h3>
+        <ul>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Sobre Nós</a></li>
+          <li><a href="./anunciar.html"><i class="fa-solid fa-chevron-right"></i> Anuncie seu Imóvel</a></li>
+          <li><a href="./financiamento.html"><i class="fa-solid fa-chevron-right"></i> Simular Financiamento</a></li>
         </ul>
-        <p class="anuncio-preco">R$ 420.000</p>
-        <p class="anuncio-parcela">Parcela estimada: <strong>R$ 2.650/mês</strong></p>
-        <button class="botao anuncio-btn"><a href="#">Simular financiamento</a></button>
       </div>
-    </article>
 
-    <article class="anuncio-card">
-      <div class="anuncio-img anuncio-img-3">
-        <span class="anuncio-badge">Lançamento</span>
+      <div class="footer-column footer-contact">
+        <h3>Fale Conosco</h3>
+        <div class="contact-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <p><strong>Matriz:</strong> Av. Paulista, 1000 - São Paulo, SP</p>
+        </div>
+        <div class="contact-item">
+          <a href="https://wa.me/5527988258176" target="_blank" class="footer-whatsapp-btn">
+            <i class="fa-brands fa-whatsapp"></i> Atendimento WhatsApp
+          </a>
+        </div>
       </div>
-      <div class="anuncio-corpo">
-        <h3>Apartamento com varanda gourmet</h3>
-        <p class="anuncio-local"><i class="fa-solid fa-location-dot"></i> Campos Elíseos, Ribeirão Preto</p>
-        <ul class="anuncio-detalhes">
-          <li><i class="fa-solid fa-bed"></i> 2 quartos</li>
-          <li><i class="fa-solid fa-ruler-combined"></i> 72 m²</li>
-          <li><i class="fa-solid fa-car"></i> 1 vaga</li>
-        </ul>
-        <p class="anuncio-preco">R$ 398.000</p>
-        <p class="anuncio-parcela">Parcela estimada: <strong>R$ 2.480/mês</strong></p>
-        <button class="botao anuncio-btn"><a href="#">Simular financiamento</a></button>
-      </div>
-    </article>
+    </div>
 
-    <article class="anuncio-card">
-      <div class="anuncio-img anuncio-img-4">
-        <span class="anuncio-badge anuncio-badge-fgts">Mobiliado</span>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Prime Lar Negócios Imobiliários Ltda. Todos os direitos reservados.</p>
+      <div class="social-icons">
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
       </div>
-      <div class="anuncio-corpo">
-        <h3>Apartamento mobiliado — Centro</h3>
-        <p class="anuncio-local"><i class="fa-solid fa-location-dot"></i> Centro, Ribeirão Preto</p>
-        <ul class="anuncio-detalhes">
-          <li><i class="fa-solid fa-bed"></i> 1 quarto</li>
-          <li><i class="fa-solid fa-ruler-combined"></i> 45 m²</li>
-          <li><i class="fa-solid fa-car"></i> 1 vaga</li>
-        </ul>
-        <p class="anuncio-preco">R$ 310.000</p>
-        <p class="anuncio-parcela">Parcela estimada: <strong>R$ 2.050/mês</strong></p>
-        <button class="botao anuncio-btn"><a href="#">Simular financiamento</a></button>
-      </div>
-    </article>
+    </div>
+  </div>
+</footer>
 
-    <article class="anuncio-card">
-      <div class="anuncio-img anuncio-img-1">
-        <span class="anuncio-badge">Oportunidade</span>
-      </div>
-      <div class="anuncio-corpo">
-        <h3>Sobrado em condomínio fechado</h3>
-        <p class="anuncio-local"><i class="fa-solid fa-location-dot"></i> Bonfim Paulista, SP</p>
-        <ul class="anuncio-detalhes">
-          <li><i class="fa-solid fa-bed"></i> 3 quartos</li>
-          <li><i class="fa-solid fa-ruler-combined"></i> 145 m²</li>
-          <li><i class="fa-solid fa-car"></i> 2 vagas</li>
-        </ul>
-        <p class="anuncio-preco">R$ 520.000</p>
-        <p class="anuncio-parcela">Parcela estimada: <strong>R$ 3.120/mês</strong></p>
-        <button class="botao anuncio-btn"><a href="#">Simular financiamento</a></button>
-      </div>
-    </article>
-
-    <article class="anuncio-card">
-      <div class="anuncio-img anuncio-img-2">
-        <span class="anuncio-badge">Minha Casa Minha Vida</span>
-      </div>
-      <div class="anuncio-corpo">
-        <h3>Casa pet friendly — Nova Aliança</h3>
-        <p class="anuncio-local"><i class="fa-solid fa-location-dot"></i> Ribeirão Preto, SP</p>
-        <ul class="anuncio-detalhes">
-          <li><i class="fa-solid fa-bed"></i> 2 quartos</li>
-          <li><i class="fa-solid fa-ruler-combined"></i> 65 m²</li>
-          <li><i class="fa-solid fa-paw"></i> Aceita pets</li>
-        </ul>
-        <p class="anuncio-preco">R$ 245.000</p>
-        <p class="anuncio-parcela">Parcela estimada: <strong>R$ 1.620/mês</strong></p>
-        <button class="botao anuncio-btn"><a href="#">Simular financiamento</a></button>
-      </div>
-    </article>
-
-  </section>
-
-  <br><br>
-
-  <footer>
-    <p class="footer">© 2026 Prime Lar. Todos os direitos reservados.</p>
-  </footer>
-
-  <script src="./PrimeLar.js"></script>
+<script src="./PrimeLar.js"></script>
 </body>
 </html>

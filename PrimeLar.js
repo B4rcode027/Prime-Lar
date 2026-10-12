@@ -1,4 +1,17 @@
-const API_PESQUISA = "https://first-web-site-1.onrender.com" // 💻 Alterado para a URL do Render
+// 🛡️ Função para escapar caracteres HTML perigosos (Mitigação de XSS)
+function escaparHTML(string) {
+  if (!string) return ""
+  return string
+    .toString()
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#x27;")
+    .replace(/\//g, "&#x2F;")
+}
+
+const API_PESQUISA = "https://onrender.com" // 💻 URL do Render
 
 const searchForm = document.getElementById("searchForm")
 const searchInput = document.getElementById("searchInput")
@@ -47,7 +60,7 @@ async function buscarSugestoes(termo) {
   }
 }
 
-async function executarPesquisa(termo) {
+async function ejecutarPesquisa(termo) {
   if (!termo.trim()) {
     alert("Digite um bairro, cidade ou tipo de imóvel para buscar.")
     return
@@ -67,7 +80,6 @@ async function executarPesquisa(termo) {
 
     renderizarResultados(data.resultados, data.query)
   } catch {
-    // Mensagem atualizada: focada em instabilidade de rede/servidor externo
     searchResults.innerHTML = `
       <p class="search-erro">
         <i class="fa-solid fa-triangle-exclamation"></i>
@@ -85,13 +97,14 @@ function renderizarDropdown(sugestoes) {
     return
   }
 
+  // 🛡️ Os valores de item foram envolvidos em escaparHTML()
   searchDropdown.innerHTML = sugestoes
     .map(
       (item, index) => `
       <button type="button" class="search-dropdown-item" data-index="${index}">
-        <span class="search-dropdown-tipo">${tipoLabel(item.tipo)}</span>
-        <strong>${item.titulo}</strong>
-        <span class="search-dropdown-local">${item.local}</span>
+        <span class="search-dropdown-tipo">${escaparHTML(tipoLabel(item.tipo))}</span>
+        <strong>${escaparHTML(item.titulo)}</strong>
+        <span class="search-dropdown-local">${escaparHTML(item.local)}</span>
       </button>`,
     )
     .join("")
@@ -107,24 +120,24 @@ function renderizarDropdown(sugestoes) {
 }
 
 function renderizarResultados(resultados, query) {
+  // 🛡️ O termo digitado (query) foi escapado para exibição segura
   if (!resultados.length) {
     searchResults.innerHTML = `
-      <h2 class="search-results-title">Resultados para "${query}"</h2>
+      <h2 class="search-results-title">Resultados para "${escaparHTML(query)}"</h2>
       <p class="search-sem-resultado">Nenhum imóvel ou local encontrado. Tente outro termo.</p>`
     return
   }
 
   searchResults.innerHTML = `
-    <h2 class="search-results-title">Resultados para "${query}" <span>(${resultados.length})</span></h2>
+    <h2 class="search-results-title">Resultados para "${escaparHTML(query)}" <span>(${resultados.length})</span></h2>
     <div class="search-results-grid">
       ${resultados
         .map(
           (item) => `
-        <article class="search-result-card" data-url="${item.url}">
-          <span class="search-result-tipo">${tipoLabel(item.tipo)}</span>
-          <h3>${item.titulo}</h3>
-          <p class="search-result-local"><i class="fa-solid fa-location-dot"></i> ${item.local}</p>
-          ${item.preco ? `<p class="search-result-preco">${formatarPreco(item.preco)}</p>` : ""}
+        <article class="search-result-card" data-url="\${escaparHTML(item.url)}">
+          <span class="search-result-tipo">\${escaparHTML(tipoLabel(item.tipo))}</span>
+          <h3>\${escaparHTML(item.titulo)}</h3>
+          <p class="search-result-local"><i class="fa-solid fa-location-dot"></i> \({escaparHTML(item.local)}</p>\){item.preco ? `<p class="search-result-preco">${formatarPreco(item.preco)}</p>` : ""}
           <button type="button" class="botao search-result-btn">Ver detalhes</button>
         </article>`,
         )
@@ -159,7 +172,6 @@ function esconderDropdown() {
 
 function mostrarErroApi() {
   if (!searchDropdown) return
-  // Mensagem de erro simplificada para o dropdown na nuvem
   searchDropdown.innerHTML = `
     <p class="search-dropdown-erro">
       Servidor temporariamente indisponível.
@@ -202,11 +214,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const navMenu = document.querySelector(".nav-menu")
   const menuLinks = document.querySelectorAll(".nav-menu a")
 
-  // Alterna o menu (Abre e Fecha) ao clicar no botão
   menuToggle.addEventListener("click", () => {
     navMenu.classList.toggle("ativo")
 
-    // Troca o ícone de Barras para um 'X' quando aberto
     const icone = menuToggle.querySelector("i")
     if (navMenu.classList.contains("ativo")) {
       icone.className = "fa-solid fa-xmark"
@@ -215,7 +225,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   })
 
-  // Fecha o menu automaticamente quando clicar em qualquer link (âncora)
   menuLinks.forEach((link) => {
     link.addEventListener("click", () => {
       if (navMenu.classList.contains("ativo")) {

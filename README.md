@@ -16,7 +16,7 @@ O projeto foi dividido em duas partes fundamentais para garantir a separação d
 
 ### ⚙️ Backend & API (Servidor)
 * **Node.js (Módulo HTTP nativo):** Criação do servidor web sem dependências externas pesadas.
-* **REST API:** Endpoints estruturados para retornar dados em formato JSON.
+* **API:** Endpoints estruturados para retornar dados em formato JSON.
 * **Render:** Infraestrutura utilizada para a hospedagem na nuvem e deploy contínuo da API.
 
 ---
